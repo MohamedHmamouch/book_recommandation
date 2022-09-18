@@ -34,11 +34,11 @@
                  <div class="col-md-3" style="margin-top : 30px">
                      <div class="card">
                          <div class="card-body">
-                             <img class="card-img-top" src="http://images.amazon.com/images/P/0439136350.01.MZZZZZZZ.jpg">
-                             <h2 class="text-white">Harry Potter</h2>
-                             <p class="text-white">JK Rowling</p>
-                             <p class="text-white">Votes - 300</p>
-                             <p class="text-white">Rating - 5.6</p>
+                             <img class="card-img-top" src="{{ image [i]}}">
+                             <p class="text-white">{{book_name[i]}}</p>
+                             <p class="text-white">{{author[i]}}</p>
+                             <p class="text-white">Votes - {{votes[i]}}</p>
+                             <p class="text-white">Rating - {{ rating[i] }}</p>
                          </div>
                      </div>
                  </div>
