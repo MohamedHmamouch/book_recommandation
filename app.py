@@ -5,7 +5,6 @@ import pickle
 popular_df = pickle.load(open('popular.pkl', 'rb'))
 app = Flask(__name__)
 
-
 @app.route('/')
 def index():
     return render_template('index.html',
