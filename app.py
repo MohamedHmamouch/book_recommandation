@@ -1,8 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import pickle
 
 
+
 popular_df = pickle.load(open('popular.pkl', 'rb'))
+pt=pickle.load(open('pt.pkl','rb'))
+books=pickle.load(open('books.pkl','rb'))
+similarity_scores=pickle.load(open('similarity_scores.pkl','rb'))
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -19,6 +24,11 @@ def index():
 def recommend_ui():
 
     return render_template("recommend.html")
+
+@app.route('/recommend_books')
+def recommend():
+    return "Hello"
+
 
 if __name__ == '__main__':
     app.run(debug=True)
